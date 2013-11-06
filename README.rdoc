@@ -1,6 +1,6 @@
 == README
 
-Wedding Playlist Maker
+Wedding Playlist Maker  
 by: Prima Prasertrat
 
 The Wedding Playlist Maker is a final project for the Back-End Web Development course at General Assembly.
