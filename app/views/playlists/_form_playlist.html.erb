@@ -1,3 +1,13 @@
+<% if @playlist.errors.any? %>
+  <h3>There were errors saving your playlist:</h3>
+  <ul>
+    <% @playlist.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<br />
 <%= form_for @playlist do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
