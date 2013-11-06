@@ -1,2 +1,41 @@
-<h1>Songs#index</h1>
-<p>Find me in app/views/songs/index.html.erb</p>
+<h3>Search Songs</h3>
+
+<%= form_tag("/songs", method: "get") do %>
+  <%= text_field_tag :q, params[:q] %>
+  <%= submit_tag("Search") %>
+<% end %>
+<br />
+
+<% if @search_results %>
+<h3>Search Results</h3>
+<table>
+	<tr>
+		<th></th>
+		<th>Name</th>
+		<th>Artist</th>
+		<th>Album</th>
+		<th></th>
+	</tr>
+	<% @results.each do |song| %>
+	<tr>
+		<td><%= image_tag(song["artworkUrl60"]) %></td>
+		<td><%= song["trackName"] %></td>
+		<td><%= song["artistName"] %></td>
+		<td><%= song["collectionName"] %></td>
+		<td><%= link_to 'Select', {:controller => "songs", 
+                       :action => "create", 
+                       :external_id => song["trackId"], 
+                       :name => song["trackName"], 
+                       :artist => song["artistName"], 
+                       :album => song["collectionName"],
+                       :duration => song["trackTimeMillis"],
+                       :thumb100 => song["artworkUrl100"],
+                       :thumb60 => song["artworkUrl60"],
+                       :itunes => song["trackViewUrl"],
+                       :audio => song["previewUrl"],},
+                       :method => "post" %></td>
+	</tr>
+	<% end %>
+</table>
+<% end %>
+
