@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  external_id: 1
+  name: MyString
+  artist: MyString
+  album: MyString
+  duration: 1
+  thumb100: MyString
+  thumb60: MyString
+  itunes: MyString
+  audio: MyString
+
+two:
+  external_id: 1
+  name: MyString
+  artist: MyString
+  album: MyString
+  duration: 1
+  thumb100: MyString
+  thumb60: MyString
+  itunes: MyString
+  audio: MyString
