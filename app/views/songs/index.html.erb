@@ -7,7 +7,7 @@
 <br />
 
 <% if @search_results %>
-<h3>Search Results</h3>
+<h3>Your search yielded <%= @results.count %> result(s)</h3>
 <table>
 	<tr>
 		<th></th>
@@ -38,4 +38,6 @@
 	<% end %>
 </table>
 <% end %>
+
+<%= params.inspect%>
 

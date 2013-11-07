@@ -15,13 +15,17 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song = Song.new(song_params)
-  	if @song.save
-  		redirect_to @song
-  	else
-  		redirect_to songs_path
-      flash[:notice] = "Oops, song cannot be displayed. Try again."
-  	end
+    cached = Song.find_by_external_id(params["external_id"])
+    if cached.nil?
+      @song = Song.new(song_params)
+    	if @song.save
+    		redirect_to @song
+    	else
+        redirect_to :back, notice: "Sorry, please try again."
+    	end
+    else
+      redirect_to cached
+    end
   end
 
   private
