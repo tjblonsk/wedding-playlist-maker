@@ -31,9 +31,9 @@ class PlaylistsController < ApplicationController
     safe_playlist_params = params.require(:playlist).permit(:name)
     @playlist = Playlist.find params[:id]
     if @playlist.update_attributes(safe_playlist_params)
-      redirect_to @playlist
+      redirect_to @playlist, :notice => "Your playlist has been renamed."
     else
-      #render :new
+      render :edit, :notice => "Sorry, please try again." 
     end
   end
 
