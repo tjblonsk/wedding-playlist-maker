@@ -5,7 +5,7 @@ class PlaylistSongsController < ApplicationController
 		if @playlist_song.save
       		redirect_to playlist_path(@playlist_song.playlist_id)
     	else
-      		#do nothing
+      		redirect_to :back, notice: "Sorry, please try again."
       	end
 	end
 
