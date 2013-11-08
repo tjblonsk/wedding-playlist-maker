@@ -6,6 +6,8 @@
 Album: <%= @song.album %><br />
 Length: <%= @song_length %><br /></p>
 
+<p>Loves: <%= @song_votes.love %> | Hates: <%= @song_votes.hate %></p>
+
 <%= form_for(@playlist_song, :url => playlist_songs_path) do |f| %>
 	<%= f.collection_select(:playlist_id, @playlists, :id, :name, include_blank: false) %>
 	<%= f.hidden_field :song_id, :value => @song.id %>

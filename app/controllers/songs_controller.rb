@@ -10,6 +10,7 @@ class SongsController < ApplicationController
   def show
     @song = Song.find params[:id]
     @song_length = Time.at(@song.duration/1000).strftime("%M:%S")
+    @song_votes = Vote.find_by_song_id(params[:id])
     @playlist_song = PlaylistSong.new
     @playlists = Playlist.where(user_id: current_user.id).order(updated_at: :desc)
   end
