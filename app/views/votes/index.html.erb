@@ -1,0 +1,7 @@
+<h3>Vote on Songs</h3>
+<p>Love or Hate these songs.</p>
+<% @playlist_song.each do |playlist_song| %>
+	<p><%= playlist_song.song.name %> <%= link_to "Love", root_path %> | <%= link_to "Hate", root_path %></p>
+	<!-- link to create/update controller with song_id and :love -->
+	
+<% end %>

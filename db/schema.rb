@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131106215257) do
+ActiveRecord::Schema.define(version: 20131107195128) do
 
   create_table "playlist_songs", force: true do |t|
     t.integer  "playlist_id"
@@ -58,5 +58,13 @@ ActiveRecord::Schema.define(version: 20131106215257) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "votes", force: true do |t|
+    t.integer  "song_id"
+    t.integer  "love",       default: 0
+    t.integer  "hate",       default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
