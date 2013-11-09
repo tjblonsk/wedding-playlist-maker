@@ -2,20 +2,6 @@
 <% @playlist_song.each do |playlist_song| %>
 	<% curr_song = playlist_song.song %>
   <% curr_vote = Vote.find_by_song_id(curr_song.id) %>
-	<p><%= curr_song.name %> <%= link_to "Love", {:controller => "votes", 
-                       :action => "create", 
-                       :vote => { :song_id => curr_song.id, :vote => "love" }},
-                       :method => "post" %>
-  <% unless curr_vote.nil? %>
-    <%= curr_vote.love %>
-  <% end %> 
-                       | 
-	<%= link_to "Hate", {:controller => "votes", 
-                       :action => "create", 
-                       :vote => { :song_id => curr_song.id, :vote => "hate" }},
-                       :method => "post" %>
-                       <% unless curr_vote.nil? %>
-    <%= curr_vote.hate %>
-  <% end %>
-                       </p>
+	<p><%= curr_song.name %> 
+  <%= link_to "Love", {:controller => "votes", :action => "create", :vote => { :song_id => curr_song.id, :vote => "love" }}, :method => "post" %> (<%= curr_vote.love %>) | <%= link_to "Hate", {:controller => "votes", :action => "create", :vote => { :song_id => curr_song.id, :vote => "hate" }}, :method => "post" %> (<%= curr_vote.hate %>)</p>
 <% end %>

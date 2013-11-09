@@ -1,7 +1,7 @@
 class VotesController < ApplicationController
   def index
+    #@playlists = Playlist.find_all_by_user_id(current_user.id)
   	@playlist_song = PlaylistSong.select(:song_id).distinct.order(updated_at: :desc)
-    @votes = Vote.all
   end
 
   def create
