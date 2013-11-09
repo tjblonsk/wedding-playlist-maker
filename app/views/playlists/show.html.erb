@@ -1,5 +1,7 @@
 <h3>Playlist: <%= @playlist.name %></h3>
 <p><%= link_to "+ Add Songs", songs_path %></p>
+
+<% if @playlist_songs.count > 0 %>
 <table>
 	<tr>
 		<th>Song</th>
@@ -26,5 +28,7 @@
 	</tr>
 	<% end %>
 </table>
+
 <p><%= link_to "+ Add Songs", songs_path %></p>
+<% end %>
 
