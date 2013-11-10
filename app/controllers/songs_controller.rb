@@ -9,9 +9,8 @@ class SongsController < ApplicationController
 
   def show
     @song = Song.find(params[:id])
-    @song_votes = Vote.find_by_song_id(@song)
     @playlist_song = PlaylistSong.new
-    @playlists = Playlist.where(user_id: current_user.id).order(updated_at: :desc)
+    @playlists = Playlist.find_current(current_user.id)
   end
 
   def create

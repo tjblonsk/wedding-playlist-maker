@@ -1,7 +1,6 @@
 class PlaylistSongsController < ApplicationController
 	def create
-		safe_playlistsong_params = params.require(:playlist_song).permit(:playlist_id, :song_id)
-		@playlist_song = PlaylistSong.new safe_playlistsong_params
+		@playlist_song = PlaylistSong.new(playlistsong_params)
 		if @playlist_song.save
       		redirect_to playlist_path(@playlist_song.playlist_id)
     	else
@@ -14,4 +13,9 @@ class PlaylistSongsController < ApplicationController
 		@playlist_song.destroy
 		redirect_to playlist_path(@playlist_song.playlist_id), :notice => "Your song has been deleted."
 	end
+
+	private
+  	def playlistsong_params
+    	params.require(:playlist_song).permit(:playlist_id, :song_id)
+  	end
 end

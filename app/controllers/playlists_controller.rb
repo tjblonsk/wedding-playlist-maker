@@ -1,6 +1,6 @@
 class PlaylistsController < ApplicationController
   def index
-    @playlists = Playlist.find_all_by_user_id(current_user.id)
+    @playlists = Playlist.find_current(current_user.id)
   end
 
   def show
@@ -13,9 +13,8 @@ class PlaylistsController < ApplicationController
   end
 
   def create
-  	safe_playlist_params = params.require(:playlist).permit(:name)
-    @playlist = Playlist.new safe_playlist_params.merge(:user_id => current_user.id)
-
+    @playlist = Playlist.new(playlist_params)
+    @playlist.user_id = current_user.id
     if @playlist.save
     	redirect_to @playlist
     else
@@ -28,9 +27,8 @@ class PlaylistsController < ApplicationController
   end
 
   def update
-    safe_playlist_params = params.require(:playlist).permit(:name)
     @playlist = Playlist.find params[:id]
-    if @playlist.update_attributes(safe_playlist_params)
+    if @playlist.update_attributes(playlist_params)
       redirect_to @playlist, :notice => "Your playlist has been renamed."
     else
       render :edit, :notice => "Sorry, please try again." 
@@ -41,5 +39,10 @@ class PlaylistsController < ApplicationController
     @playlist = Playlist.find params[:id]
     @playlist.destroy
     redirect_to playlists_path, :notice => "Your playlist has been deleted."
+  end
+
+  private
+  def playlist_params
+    params.require(:playlist).permit(:name)
   end
 end
