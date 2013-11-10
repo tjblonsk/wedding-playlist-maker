@@ -10,4 +10,14 @@ class Vote < ActiveRecord::Base
   		current_vote = self.where(song_id: song_id, user_id: user_id).first
   	end
 
+  	def self.display(num)
+  		case num
+  		when 1
+  			return "yes"
+  		when 2
+  			return "no"
+  		else
+  			return "undecided"
+  		end
+  	end
 end
