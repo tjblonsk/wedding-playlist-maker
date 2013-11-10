@@ -5,5 +5,4 @@ class Vote < ActiveRecord::Base
 	def self.find_create(song_id, user_id)
     	self.where(:song_id => song_id, :user_id => user_id).first_or_create
   	end
-
 end

@@ -4,7 +4,7 @@
 
 <p>Artist: <%= @song.artist %><br />
 Album: <%= @song.album %><br />
-Length: <%= @song_length %><br /></p>
+Length: <%= @song.convert_time %><br /></p>
 
 <%= form_for(@playlist_song, :url => playlist_songs_path) do |f| %>
 	<%= f.collection_select(:playlist_id, @playlists, :id, :name, include_blank: false) %>
