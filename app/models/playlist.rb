@@ -5,6 +5,6 @@ class Playlist < ActiveRecord::Base
 	has_many :songs, through: :playlist_songs
 
 	def self.find_current(user_id)
-		where(user_id: user_id).order(updated_at: :desc)
+		where(user_id: user_id).order(updated_at: :desc).to_a
 	end
 end

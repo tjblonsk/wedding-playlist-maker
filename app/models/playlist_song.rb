@@ -7,11 +7,11 @@ class PlaylistSong < ActiveRecord::Base
 	after_save :upvote_song
 
 	def self.by_playlist(playlist_id)
-		where(playlist_id: playlist_id).to_a
+		where(playlist_id: playlist_id).order(updated_at: :desc).to_a
 	end
 
 	def self.by_song(song_id)
-		where(song_id: song_id).to_a
+		where(song_id: song_id).order(updated_at: :desc).to_a
 	end
 
 	def self.find_songs(playlists)
