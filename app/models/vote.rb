@@ -12,7 +12,6 @@ class Vote < ActiveRecord::Base
       where.not(song_id: user_songs).to_a
     end
 
-    #change this
   	def self.find_current_vote(song_id, user_id)
   		current_vote = self.where(song_id: song_id, user_id: user_id).first
   	end
