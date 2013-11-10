@@ -1,6 +1,8 @@
 class Vote < ActiveRecord::Base
 	belongs_to :song
 	belongs_to :user
+
+  delegate :name, :artist, :album, :duration, :thumb60, :audio, :to => :song, :allow_nil => true
 	
 	def self.find_create(song_id, user_id)
     	where(song_id: song_id, user_id: user_id).first_or_create

@@ -6,6 +6,14 @@ class PlaylistSong < ActiveRecord::Base
 
 	after_save :upvote_song
 
+	def self.by_playlist(playlist_id)
+		where(playlist_id: playlist_id).to_a
+	end
+
+	def self.by_song(song_id)
+		where(song_id: song_id).to_a
+	end
+
 	def self.find_songs(playlists)
 		where.not(playlist_id: playlists).select(:song_id).distinct.order(updated_at: :desc)
 	end

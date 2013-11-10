@@ -1,7 +1,8 @@
 class VotesController < ApplicationController
   def index
     @playlists = Playlist.find_current(current_user.id)
-    @playlist_song = PlaylistSong.find_songs(@playlists)
+    #@playlist_song = PlaylistSong.find_songs(@playlists)
+    @votes = Vote.all
   end
 
   def create
