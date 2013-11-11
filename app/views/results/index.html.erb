@@ -1,4 +1,15 @@
 <h3>View Results</h3>
+<table>
+	<tr>
+		<td>Song Name</td>
+		<td>Y / N</td>
+		<td>Number of votes</td>
+	</tr>
 <% @results.each do |result| %>
-	<p><%= result.name %> num-votes:<%= result.votings %></p>
+	<tr>
+		<td><%= result.name %><br />by: <%= result.artist %></td>
+		<td><%= result.cast_vote %></td>
+		<td><%= result.votings %></td>
+	</tr>
 <% end %>
+</table>
