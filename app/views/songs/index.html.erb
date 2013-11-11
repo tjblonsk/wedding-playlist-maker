@@ -16,7 +16,7 @@
 		<th>Album</th>
 		<th></th>
 	</tr>
-	<% @results.each do |song| %>
+	<% @paged_results.each do |song| %>
 	<tr>
 		<td><%= image_tag(song["artworkUrl60"]) %></td>
 		<td><%= song["trackName"] %></td>
@@ -38,6 +38,5 @@
 	<% end %>
 </table>
 <% end %>
-
-<%= params.inspect%>
+<%= paginate @paged_results %>
 

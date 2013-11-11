@@ -4,7 +4,8 @@ class SongsController < ApplicationController
       @query = params[:q]
       @search_results = true
     end
-    @results = ITunesSearchAPI.search(:term => @query, :country => "US", :media => "music", :limit => 20)
+    @results = ITunesSearchAPI.search(:term => @query, :country => "US", :media => "music", :limit => 100)
+    @paged_results = Kaminari.paginate_array(@results).page(params[:page]).per(10)
   end
 
   def show
