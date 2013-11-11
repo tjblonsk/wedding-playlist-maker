@@ -1,15 +1,39 @@
 <h3>View Results</h3>
+<%= link_to "Vote again", votes_path %>
 <table>
 	<tr>
-		<td>Song Name</td>
-		<td>Y / N</td>
-		<td>Number of votes</td>
+		<td>
+			<table>
+				<tr>
+					<td>Song Name</td>
+					<td>Y / N</td>
+					<td>Number of votes</td>
+				</tr>
+			<% @yes_votes.each do |yes| %>
+				<tr>
+					<td><%= yes.name %><br />by: <%= yes.artist %></td>
+					<td><%= yes.cast_vote %></td>
+					<td><%= yes.votings %></td>
+				</tr>
+			<% end %>
+			</table>
+		</td>
+		<td valign="top">
+			<table>
+				<tr>
+					<td>Song Name</td>
+					<td>Y / N</td>
+					<td>Number of votes</td>
+				</tr>
+			<% @no_votes.each do |no| %>
+				<tr>
+					<td><%= no.name %><br />by: <%= no.artist %></td>
+					<td><%= no.cast_vote %></td>
+					<td><%= no.votings %></td>
+				</tr>
+			<% end %>
+			</table>
+			
+		</td>
 	</tr>
-<% @results.each do |result| %>
-	<tr>
-		<td><%= result.name %><br />by: <%= result.artist %></td>
-		<td><%= result.cast_vote %></td>
-		<td><%= result.votings %></td>
-	</tr>
-<% end %>
 </table>

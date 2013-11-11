@@ -16,6 +16,10 @@ class Vote < ActiveRecord::Base
   		current_vote = self.where(song_id: song_id, user_id: user_id).first
   	end
 
+    def self.calculate_vote(vote_category)
+      find_by_sql "Select *, count(cast_vote) AS votings FROM votes WHERE cast_vote = #{vote_category} GROUP BY song_id ORDER BY votings DESC"
+    end
+
     #change this
   	def self.display(num)
   		case num
