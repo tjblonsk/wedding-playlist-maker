@@ -1,8 +1,7 @@
 <h3>Vote on these songs</h3>
 <%= link_to "See Results", results_path %>
 
-<% @eligible_songs.uniq! {|s| s.song_id } %>
-<% @eligible_songs.each do |song| %>
+<% @paged_songs.each do |song| %>
 	<% vote = Vote.find_current_vote(song.song_id, current_user.id) %>
 	<% if vote %>
 		<div class="<%= Vote.display(vote.cast_vote) %>">
@@ -16,3 +15,4 @@
 	 	<%= link_to "No", {:controller => "votes", :action => "create", :vote => { :song_id => song.song_id, :vote => 2 }}, :method => "post" %></p>
 	</div>
 <% end %>
+<%= paginate @paged_songs %>
