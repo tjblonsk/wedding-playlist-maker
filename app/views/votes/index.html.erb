@@ -1,4 +1,5 @@
 <h3>Vote on these songs</h3>
+<%= link_to "See Results", results_path %>
 <% @eligible_songs.uniq! {|s| s.song_id } %>
 <% @eligible_songs.each do |song| %>
 	<% vote = Vote.find_current_vote(song.id, current_user.id) %>

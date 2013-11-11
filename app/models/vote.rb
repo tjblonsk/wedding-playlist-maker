@@ -27,4 +27,8 @@ class Vote < ActiveRecord::Base
   			return "undecided"
   		end
   	end
+
+    def self.list_top
+      
+    end
 end
