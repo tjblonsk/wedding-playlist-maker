@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px"
+	 height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<g id="bkg_bottom">
+	<g id="Layer_8">
+	</g>
+	<rect y="75.333" fill="#E0FAFF" width="100" height="24.667"/>
+</g>
+<g id="bkg_top">
+	<g id="Layer_6">
+		<rect fill-rule="evenodd" clip-rule="evenodd" fill="#16A6B6" width="100" height="20.852"/>
+	</g>
+</g>
+<g id="ribbon">
+	<g id="Layer_4">
+		<polygon fill="#E05A5A" points="177.176,36.929 177.176,96.872 247.281,96.872 213.623,66.001 247.679,36.923 		"/>
+		<polygon fill="#E05A5A" points="-137.008,36.929 -137.008,96.872 -207.114,96.872 -173.456,66.001 -207.512,36.923 		"/>
+		<g>
+			<polygon fill="#BA4949" points="199.183,45.85 199.183,48.241 234.422,48.241 237.222,45.85 			"/>
+			<polygon fill="#BA4949" points="187.857,87.954 237.558,87.954 234.952,85.566 190.733,85.566 			"/>
+		</g>
+		<g>
+			<polygon fill="#BA4949" points="-137.008,78.549 -137.008,96.827 -159.016,78.549 			"/>
+			<polygon fill="#BA4949" points="177.206,78.549 177.206,96.827 199.212,78.549 			"/>
+			<polygon fill="#BA4949" points="-159.016,45.85 -159.016,48.241 -194.257,48.241 -197.056,45.85 			"/>
+			<polygon fill="#BA4949" points="-147.691,87.954 -197.392,87.954 -194.786,85.566 -150.568,85.566 			"/>
+		</g>
+		<rect x="-159.012" y="18.8" fill="#EE6557" width="358.196" height="59.749"/>
+		<rect x="-159.012" y="27.629" fill="#BA4949" width="358.196" height="2.39"/>
+		<rect x="-159.012" y="67.343" fill="#BA4949" width="358.196" height="2.39"/>
+	</g>
+</g>
+<g id="circle" display="none">
+	<g display="inline">
+		<g>
+			<circle fill="#E0FAFF" stroke="#BA4949" stroke-width="3" cx="50.027" cy="50.345" r="48.027"/>
+			<path fill="#E0FAFF" d="M50.027,95.878c-12.162,0-23.596-4.737-32.196-13.336c-8.6-8.6-13.336-20.035-13.336-32.197
+				s4.736-23.596,13.336-32.197c8.6-8.599,20.034-13.336,32.196-13.336c12.163,0,23.597,4.736,32.197,13.336
+				c8.599,8.601,13.336,20.035,13.336,32.197s-4.737,23.597-13.336,32.197C73.624,91.141,62.19,95.878,50.027,95.878L50.027,95.878z
+				"/>
+		</g>
+	</g>
+</g>
+<g id="heart" display="none">
+	<path display="inline" fill-rule="evenodd" clip-rule="evenodd" fill="#16A6B6" d="M50.476,20.852
+		c-16.96,0-26.264,8.507-27.369,21.843c1.06-0.613,2.306-1.013,3.723-1.174c2.202-10.022,10.472-13.895,23.646-13.895
+		c13.169,0,21.438,3.869,23.645,13.881c1.418,0.152,2.663,0.549,3.724,1.162C76.73,29.349,67.424,20.852,50.476,20.852
+		L50.476,20.852z"/>
+	<path display="inline" fill-rule="evenodd" clip-rule="evenodd" fill="#EE6557" d="M50.477,79.84
+		c-8.927-5.112-15.724-12.028-19.105-18.688V45.426c4.351-5.45,13.696-6.473,19.105,4.72c5.409-11.192,14.754-10.17,19.105-4.72
+		l0.001,15.725C66.201,67.811,59.406,74.727,50.477,79.84"/>
+	<path display="inline" fill-rule="evenodd" clip-rule="evenodd" fill="#16A6B6" d="M28.132,45.152
+		c-2.345-0.085-7.714,0.46-7.713,7.995c0.001,7.535,5.368,8.08,7.712,7.994L28.132,45.152L28.132,45.152z"/>
+	<path display="inline" fill-rule="evenodd" clip-rule="evenodd" fill="#16A6B6" d="M72.823,45.152
+		c2.344-0.085,7.713,0.46,7.712,7.995c-0.001,7.535-5.368,8.08-7.712,7.994V45.152L72.823,45.152z"/>
+</g>
+</svg>

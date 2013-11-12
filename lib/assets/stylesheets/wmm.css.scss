@@ -1,0 +1,96 @@
+/*!
+ * Wedding Music Maker styles
+ * By: primathinks
+ */
+
+/************* fonts *************/
+
+@font-face {
+    font-family: 'PopulaireRegular';
+    src: asset-url('Populaire-webfont.eot');
+    src: asset-url('Populaire-webfont.eot?#iefix') format('embedded-opentype'),
+         asset-url('Populaire-webfont.woff') format('woff'),
+         asset-url('Populaire-webfont.ttf') format('truetype'),
+         asset-url('Populaire-webfont.svg#PopulaireRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'alek_regularregular';
+    src: asset-url('Alek_Regular-webfont.eot');
+    src: asset-url('Alek_Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         asset-url('Alek_Regular-webfont.woff') format('woff'),
+         asset-url('Alek_Regular-webfont.ttf') format('truetype'),
+         asset-url('Alek_Regular-webfont.svg#alek_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/************* html elements *************/
+
+ body {
+  background-color: #e0faff;
+ }
+
+ h1, h2, h3 { font-family: 'alek_regularregular'; color: #ed6456; margin: 10px 0 10px 0;}
+
+ h1, .h1 { font-size: 100px;}
+ h2, .h2 { font-size: 80px;}
+ h3, .h3 { font-size: 60px;}
+
+ nav {
+ 	font-family: 'PopulaireRegular'; width: 100%; padding: 0.5em 0 0 0; background-color: #16a6b6; color: #e0faff;
+ }
+
+ nav h1 {
+ 	font-family: 'PopulaireRegular'; font-size: 60px; color: #e0faff; margin: 5px auto 5px auto; text-align: center;
+ }
+
+ nav .inner {
+ 	margin:0; padding:0; background:url('logo-ribbon-bkg.svg'); background-repeat:repeat-x; text-align: center;	position:relative;
+ }
+
+ nav .inner img.left {
+ 	position:absolute; left:0px;
+ }
+
+ nav .inner img.right {
+ 	float: right;
+ }
+
+ nav .inner .menu { margin-left: 70px; display: inline-block; font-size: 24px;
+ }
+
+ nav .inner .menu a { color: #fff; display: inline-block; margin: 0 20px;
+ }
+
+ nav .user_nav {
+ 	text-align: right; margin-right: 20px; color: #fff; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12px; 
+ }
+
+ nav .user_nav a {
+  	color: #e0faff;
+ }
+
+ label {
+ 	margin-top: 10px;
+ 	margin-bottom: 0;
+ 	font-weight: bold;
+ 	color: #51656c;
+ }
+
+/************* form elements *************/
+
+.btn {margin: 10px 0 10px 0;}
+.btn-primary {
+  color: #ffffff;
+  background-color: #16a6b6;
+  border-color: #16a6b6;
+}
+
+/************* custom classes *************/
+
+.float-right { float:right; }

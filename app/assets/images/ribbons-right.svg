@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="71px"
+	 height="100px" viewBox="0 0 71 100" enable-background="new 0 0 71 100" xml:space="preserve">
+<g id="bkg_top">
+	<g id="Layer_6">
+		<rect x="-405.544" y="0" fill-rule="evenodd" clip-rule="evenodd" fill="#16A6B6" width="485.013" height="113.49"/>
+	</g>
+</g>
+<g id="bkg_bottom">
+	<g id="Layer_8">
+	</g>
+	<g id="Layer_9">
+	</g>
+	<g id="Layer_10">
+		<rect x="21.838" y="96.827" fill="#E0FAFF" width="49.038" height="3.173"/>
+	</g>
+	<rect x="-355.732" y="75.333" fill="#E0FAFF" width="380.339" height="24.667"/>
+</g>
+<g id="ribbon">
+	<g id="Layer_4">
+		<polygon fill="#E05A5A" points="0.496,36.929 0.496,96.872 70.602,96.872 36.944,66.001 71,36.923 		"/>
+		<g>
+			<polygon fill="#BA4949" points="22.504,45.85 22.504,48.241 57.743,48.241 60.543,45.85 			"/>
+			<polygon fill="#BA4949" points="11.178,87.954 60.879,87.954 58.273,85.566 14.054,85.566 			"/>
+		</g>
+		<g>
+			<polygon fill="#BA4949" points="0.527,78.549 0.527,96.827 22.532,78.549 			"/>
+		</g>
+		<rect x="-335.692" y="18.8" fill="#EE6557" width="358.196" height="59.749"/>
+		<rect x="-335.692" y="27.629" fill="#BA4949" width="358.196" height="2.39"/>
+		<rect x="-335.692" y="67.343" fill="#BA4949" width="358.196" height="2.39"/>
+	</g>
+	<rect id="_x3C_Slice_x3E__3_" x="-43" y="-100" fill="none" width="43" height="100"/>
+	<rect id="_x3C_Slice_x3E_" x="-43" y="-100" fill="none" width="43" height="100"/>
+</g>
+<g id="Layer_11">
+</g>
+<g id="circle" display="none">
+</g>
+<g id="heart" display="none">
+</g>
+</svg>
