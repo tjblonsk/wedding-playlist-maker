@@ -1,3 +1,12 @@
-// Place all the styles related to the playlists controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+a.title {
+	font-family: 'PopulaireRegular';
+	font-size: 30px;
+	color: #51656c;
+	padding: 0 0;
+	margin: 0 10px 0 0;
+	border-bottom: 1px dotted #51656c;
+}
+
+a.title:hover {
+	text-decoration: none;
+}

@@ -77,6 +77,11 @@
   	color: #e0faff;
  }
 
+ .table th {
+    background-color: #51656c; 
+    color: #fff;
+ }
+
  label {
  	margin-top: 10px;
  	margin-bottom: 0;
@@ -87,11 +92,14 @@
 /************* form elements *************/
 
 .btn {margin: 10px 0 10px 0;}
+
 .btn-primary {
   color: #ffffff;
   background-color: #16a6b6;
   border-color: #16a6b6;
 }
+
+.btn-danger {margin: 0 0;}
 
 /************* custom classes *************/
 

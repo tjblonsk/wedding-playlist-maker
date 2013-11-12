@@ -1,5 +1,5 @@
 <% if @playlist.errors.any? %>
-  <h3>There were errors saving your playlist:</h3>
+  <p>There were errors saving your playlist:</p>
   <ul>
     <% @playlist.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
@@ -9,7 +9,7 @@
 
 <br />
 <%= form_for @playlist do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.submit "Submit "%>
+  <%= f.label :name %><br />
+  <%= f.text_field :name %><br />
+  <%= f.submit "Submit", :class => "btn btn-primary" %>
 <% end %>

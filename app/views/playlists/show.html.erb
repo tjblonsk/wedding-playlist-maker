@@ -1,11 +1,11 @@
-<h3>Playlist: <%= @playlist.name %></h3>
-<p><%= link_to "+ Add Songs", songs_path %></p>
+<h2>Playlist: <%= @playlist.name %></h2>
+<p><%= link_to "+ Add Songs", songs_path, :class => "btn btn-primary" %></p>
 
 <% if @playlist_songs.count > 0 %>
-<table>
+<table class="table">
 	<tr>
-		<th>Song</th>
 		<th></th>
+		<th>Song</th>
 		<th>Artist</th>
 		<th>Album</th>
 		<th>Length</th>
@@ -23,12 +23,13 @@
 		<td><%= link_to 'Delete', {:controller => "playlist_songs", 
                        :action => "destroy",  
                        :id => song.id,}, 
-                       :confirm => "Are you sure?", 
+                       :confirm => "Are you sure?",
+                       :class => "btn btn-danger",  
                        :method => "delete" %></td>
 	</tr>
 	<% end %>
 </table>
 
-<p><%= link_to "+ Add Songs", songs_path %></p>
+<p><%= link_to "+ Add Songs", songs_path, :class => "btn btn-primary" %></p>
 <% end %>
 

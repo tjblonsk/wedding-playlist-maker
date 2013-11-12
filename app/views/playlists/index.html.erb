@@ -1,11 +1,12 @@
-<h3>Your Playlists</h3>
+<h2>Your Playlists</h2>
 <% @playlists.each do |playlist| %>
-	<p><%= link_to playlist.name, playlist %> (<%= playlist.songs.count %> songs)<br />
+	<p><%= link_to playlist.name, playlist, :class => "title" %> (<%= playlist.songs.count %> songs)</p>
+	<p>
 		<% playlist.songs.each do |song| %>
 			<%= image_tag(song.thumb60) %>
 		<% end %>
-		<p><%= link_to "Rename", edit_playlist_path(playlist) %> | 
+		<p><%= link_to "View", playlist %> | <%= link_to "Rename", edit_playlist_path(playlist) %> | 
 		<%= link_to 'Delete', playlist, :confirm => "Are you sure?", :method => "delete" %></p>
-	<p><br />
+	</p>
 <% end %>
-<p><%= link_to "+ New Playlist", new_playlist_path %></p>
+<p><%= link_to "+ New Playlist", new_playlist_path, :class => "btn btn-primary"  %></p>
