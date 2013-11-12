@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+- 2.0.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: g+kXJB0k9WDqwXueO8OT27oc4Kvu57FIHRZk9VF/hJ3u09Qgm6vToECvV9ouXr02+e1G6OP0EHIc9zKC+wK4CCCVljLUcWDlFDEZbF7hT97XM8VpQ/T+H98tsvAHXnsm7wwZidfRnM6N/nkNL3OwSnTKks2sGMDSzPQV2t3JPxg=
+  app: wedding-music-maker
+  on:
+    repo: primathinks/wedding-playlist-maker
