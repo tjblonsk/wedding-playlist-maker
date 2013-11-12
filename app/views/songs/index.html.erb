@@ -22,7 +22,7 @@
 		<td><%= song["trackName"] %></td>
 		<td><%= song["artistName"] %></td>
 		<td><%= song["collectionName"] %></td>
-		<td><%= link_to 'Select', {:controller => "songs", 
+		<td><%= link_to 'View', {:controller => "songs", 
                        :action => "create", 
                        :external_id => song["trackId"], 
                        :name => song["trackName"], 

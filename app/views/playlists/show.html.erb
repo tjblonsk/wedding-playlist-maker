@@ -8,7 +8,6 @@
 		<th>Song</th>
 		<th>Artist</th>
 		<th>Album</th>
-		<th>Length</th>
 		<th>Preview</th>
 		<th></th>
 	</tr>
@@ -18,7 +17,6 @@
 		<td><%= song.name %></td>
 		<td><%= song.artist %></td>
 		<td><%= song.album %></td>
-		<td><%= Time.at(song.duration/1000).strftime("%M:%S") %></td>
 		<td><%= audio_tag(song.audio, :controls => true, :preload => "none") %></td>
 		<td><%= link_to 'Delete', {:controller => "playlist_songs", 
                        :action => "destroy",  
