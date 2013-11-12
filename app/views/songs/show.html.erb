@@ -1,13 +1,19 @@
-<h3><%= @song.name %></h3>
-<%= image_tag(@song.thumb100) %><br />
-<%= audio_tag(@song.audio, :controls => true, :preload => "none") %>
+<h4><%= @song.name %></h4>
+<%= image_tag(@song.thumb100, :class => "float-left", :alt => "album cover") %>
 
-<p>Artist: <%= @song.artist %><br />
-Album: <%= @song.album %><br />
-Length: <%= @song.convert_time %><br /></p>
+<div class="sm-txt">
+	<p>Artist: <%= @song.artist %><br />
+	Album: <%= @song.album %><br />
+	Length: <%= @song.convert_time %><br /></p>
+	<%= audio_tag(@song.audio, :controls => true, :preload => "none") %>
+</div>
 
+<div class="clear spacer10"></div>
+
+<div class="sm-txt">Choose a Playlist:<br />
 <%= form_for(@playlist_song, :url => playlist_songs_path) do |f| %>
 	<%= f.collection_select(:playlist_id, @playlists, :id, :name, include_blank: false) %>
 	<%= f.hidden_field :song_id, :value => @song.id %>
-	<%= f.submit "Add to Playlist" %>
+	<%= f.submit "Submit", :class => "btn btn-primary" %>
 <% end %>
+</div>

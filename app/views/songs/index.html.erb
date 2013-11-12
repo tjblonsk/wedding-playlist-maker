@@ -1,14 +1,14 @@
 <h3>Search Songs</h3>
 
 <%= form_tag("/songs", method: "get") do %>
-  <%= text_field_tag :q, params[:q] %>
-  <%= submit_tag("Search") %>
+  <%= text_field_tag :q, params[:q] %><br />
+  <%= submit_tag "Search", :class => "btn btn-primary" %>
 <% end %>
 <br />
 
 <% if @search_results %>
-<h3>Your search yielded <%= @results.count %> result(s)</h3>
-<table>
+<h4>Your search yielded <%= @results.count %> result(s)</h4>
+<table class="table">
 	<tr>
 		<th></th>
 		<th>Name</th>
@@ -33,6 +33,7 @@
                        :thumb60 => song["artworkUrl60"],
                        :itunes => song["trackViewUrl"],
                        :audio => song["previewUrl"],},
+                       :class => "btn btn-info", 
                        :method => "post" %></td>
 	</tr>
 	<% end %>

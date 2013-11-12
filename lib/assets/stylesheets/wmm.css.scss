@@ -43,6 +43,8 @@
  h2, .h2 { font-size: 80px;}
  h3, .h3 { font-size: 60px;}
 
+ h4, .h4 { font-family: 'PopulaireRegular'; font-size: 40px;}
+
  nav {
  	font-family: 'PopulaireRegular'; width: 100%; padding: 0.5em 0 0 0; background-color: #16a6b6; color: #e0faff;
  }
@@ -99,8 +101,16 @@
   border-color: #16a6b6;
 }
 
-.btn-danger {margin: 0 0;}
+.btn-info, .btn-danger {margin: 0 0;}
 
 /************* custom classes *************/
+.clear {clear:both;}
+
+.spacer10 {width:1px; height:10px;}
+
+.float-left { float:left; margin-right:10px; }
 
 .float-right { float:right; }
+
+.sm-txt {font-size: 13px;}
+
