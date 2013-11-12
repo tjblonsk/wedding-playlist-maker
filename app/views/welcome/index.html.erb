@@ -1,5 +1,12 @@
-<h1>Welcome!</h1>
-<p>Cupcake ipsum dolor sit amet candy canes brownie. Brownie gummi bears cotton candy. Sweet pastry donut. Pudding sweet roll chocolate bar gingerbread cheesecake. Soufflé applicake chupa chups cheesecake powder unerdwear.com sweet roll topping. Tart macaroon dragée sweet tootsie roll gummies chocolate gummies icing. Danish sugar plum jelly.</p>
-<p><%= link_to "Get Started", playlists_path %></p>
+<%= image_tag("notepad.svg", :class => "float-right", :alt => "notepad") %>
+<h2>Welcome</h2>
+<p>Help us create our wedding playlist. Here&rsquo;s how it works:</p>
+<ul>
+	<li>Start a Playlist</li>
+	<li>Search and add songs</li>
+	<li>Vote on everyone else's songs</li>
+</ul>
 
-<p><%= link_to "Votes", votes_path %></p>
+<p>We will generate the wedding playlist based on top votes.</p>
+
+<p><%= link_to "Get Started »", playlists_path, :class => "btn btn-primary" %></p>
