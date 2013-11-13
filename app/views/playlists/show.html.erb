@@ -1,4 +1,5 @@
 <h2>Playlist: <%= @playlist.name %></h2>
+<p>Add as many songs as you want. Finished adding songs? <%= link_to "Go Vote!", votes_path %></p>
 <p><%= link_to "+ Add Songs", songs_path, :class => "btn btn-primary" %></p>
 
 <% if @playlist_songs.count > 0 %>
@@ -28,7 +29,7 @@
 	<% end %>
 </table>
 
-<p>Finshed adding songs? <%= link_to "Go Vote »", votes_path, :class => "btn btn-primary" %></p>
+<p>Finished adding songs? <%= link_to "Go Vote!", votes_path %></p>
 
 <% end %>
 
