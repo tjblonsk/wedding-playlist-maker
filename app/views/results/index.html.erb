@@ -8,7 +8,7 @@
 		<% @yes_votes.each do |yes| %>
 			<%= image_tag(yes.thumb60, :class => "float-left", :alt => "album cover") %>
 			<%= yes.name %><br />by: <%= yes.artist %><br />
-			<%= yes.votings %> votes
+			<%= yes.votings %> vote<%= yes.votings > 1 ? "s" : "" %>
 			<div class="clear spacer10"></div>
 		<% end %>
 	</div>
@@ -17,7 +17,7 @@
 		<% @no_votes.each do |no| %>
 			<%= image_tag(no.thumb60, :class => "float-left", :alt => "album cover") %>
 			<%= no.name %><br />by: <%= no.artist %>
-			<%= no.votings %> votes
+			<%= no.votings %> vote<%= no.votings > 1 ? "s" : "" %>
 			<div class="clear spacer10"></div>
 		<% end %>
 	</div>
