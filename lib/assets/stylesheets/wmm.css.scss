@@ -104,6 +104,23 @@
 
 .btn-info, .btn-danger {margin: 0 0;}
 
+/************* pagination *************/
+.paginate-container {text-align:center;}
+
+.pagination ul li {display:inline;}
+
+.pagination ul li.active a {background-color:#ee6557; color:#fff;}
+
+.pagination a, .pagination span.current, .pagination span.gap {
+  float: left;
+  padding: 0 14px;
+  line-height: 38px;
+  text-decoration: none;
+  background-color: #fff;
+  color: #16a6b6;
+  border: 1px solid #ddd;
+}
+
 /************* custom classes *************/
 .clear {clear:both;}
 
@@ -114,4 +131,6 @@
 .float-right { float:right; }
 
 .sm-txt {font-size: 13px;}
+
+
 

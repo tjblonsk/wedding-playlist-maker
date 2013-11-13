@@ -17,4 +17,6 @@
 	 	<%= link_to "No", {:controller => "votes", :action => "create", :vote => { :song_id => song.song_id, :vote => 2 }}, :class => "btn btn-primary" ,:method => "post" %></p>
 	</div>
 <% end %>
-<%= paginate @paged_songs %>
+<div class="paginate-container">
+	<%= paginate @paged_songs %>
+</div>
