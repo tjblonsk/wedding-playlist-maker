@@ -1,10 +1,10 @@
-<h3>View Results</h3>
-<p>Thanks very much for your vote. Here are the top loved and hated songs. See you on the dance floor!</p>
+<h2>View Results</h2>
+<p>Thanks for voting. Here are the most loved and hated songs. See you on the dance floor!</p>
 <%= link_to "Vote again", votes_path, :class => "btn btn-primary" %>
 
 <div class="row">
 	<div class="col-md-4 sm-txt">
-		<h4 class="col-header">Top Yes Votes</h4>
+		<h4 class="col-header">Most Loved</h4>
 		<% @yes_votes.each do |yes| %>
 			<%= image_tag(yes.thumb60, :class => "float-left", :alt => "album cover") %>
 			<%= yes.name %><br />by: <%= yes.artist %><br />
@@ -13,7 +13,7 @@
 		<% end %>
 	</div>
 	<div class="col-md-4 col-md-offset-1 sm-txt">
-		<h4 class="col-header">Top No Votes</h4>
+		<h4 class="col-header">Most Hated</h4>
 		<% @no_votes.each do |no| %>
 			<%= image_tag(no.thumb60, :class => "float-left", :alt => "album cover") %>
 			<%= no.name %><br />by: <%= no.artist %>

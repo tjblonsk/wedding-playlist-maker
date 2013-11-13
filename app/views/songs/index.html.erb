@@ -1,5 +1,4 @@
-<h3>Search Songs</h3>
-
+<h2>Search Songs</h2>
 <%= form_tag("/songs", method: "get") do %>
   <%= text_field_tag :q, params[:q] %><br />
   <%= submit_tag "Search", :class => "btn btn-primary" %>
