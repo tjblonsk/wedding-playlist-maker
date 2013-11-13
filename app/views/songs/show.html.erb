@@ -11,7 +11,7 @@
 
 <div class="clear spacer10"></div>
 
-<div class="sm-txt">Choose a Playlist:<br />
+<h4>Choose a Playlist:</h4>
 <%= form_for(@playlist_song, :url => playlist_songs_path) do |f| %>
 	<%= f.collection_select(:playlist_id, @playlists, :id, :name, include_blank: false) %>
 	<%= f.hidden_field :song_id, :value => @song.id %>
