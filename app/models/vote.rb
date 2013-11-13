@@ -17,8 +17,7 @@ class Vote < ActiveRecord::Base
   	end
 
     def self.calculate_vote(vote_category)
-      #find_by_sql "Select *, count(cast_vote) AS votings FROM votes WHERE cast_vote = #{vote_category} GROUP BY song_id ORDER BY votings DESC"
-      find_by_sql "Select user_id, song_id, cast_vote, count(*) AS votings FROM votes WHERE cast_vote = #{vote_category} GROUP BY song_id ORDER BY votings DESC"
+      find_by_sql "Select song_id, count(cast_vote) AS votings FROM votes WHERE cast_vote = #{vote_category} GROUP BY song_id ORDER BY votings DESC"
     end
 
     #change this
