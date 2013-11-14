@@ -5,6 +5,7 @@ class VotesController < ApplicationController
     @eligible_songs = Vote.find_eligible(@playlist_songs)
     @eligible_songs.uniq! {|s| s.song_id }
     @paged_songs = Kaminari.paginate_array(@eligible_songs).page(params[:page]).per(10)
+    @current_page = params[:page].to_i
   end
 
   def create
