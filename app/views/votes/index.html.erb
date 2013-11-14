@@ -28,7 +28,8 @@
 			<p><%= song.name %><br />
 			by: <%= song.artist %></p>
 			<div class="clear spacer10"></div>
-			<%= audio_tag(song.audio, :controls => true, :preload => "none") %>
+			<%= audio_tag(song.audio, :controls => true, :preload => "none") %><br />
+			<%= song.created_at %>
 			</div>
 		</div><!-- /end row-->
 	<% end %>

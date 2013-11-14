@@ -9,7 +9,7 @@ class Vote < ActiveRecord::Base
   	end
 
     def self.find_eligible(user_songs)
-      where.not(song_id: user_songs).order(updated_at: :desc).to_a
+      where.not(song_id: user_songs).to_a
     end
 
   	def self.find_current_vote(song_id, user_id)
