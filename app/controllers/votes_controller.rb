@@ -10,8 +10,9 @@ class VotesController < ApplicationController
   def create
     @vote = Vote.find_create(vote_params[:song_id], current_user.id)
     @vote.cast_vote = vote_params[:vote]
+    anchor_id = vote_params[:song_id]
   	if @vote.save
-  		redirect_to :back
+  		redirect_to votes_path(anchor: anchor_id)
   	else
   		redirect_to :back, :notice => "Sorry, try again."
   	end

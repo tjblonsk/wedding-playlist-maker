@@ -24,7 +24,8 @@
 				<%= link_to "No", {:controller => "votes", :action => "create", :vote => { :song_id => song.song_id, :vote => 2 }}, :class => "txt-vote" ,:method => "post" %>
 			</div>
 			<div class="col-md-6">
-			<%= image_tag(song.thumb60, :class => "float-left", :alt => "album cover", :id => song.id) %>
+			<a id="<%= song.id %>"></a>
+			<%= image_tag(song.thumb60, :class => "float-left", :alt => "album cover") %>
 			<p><%= song.name %><br />
 			by: <%= song.artist %></p>
 			<div class="clear spacer10"></div>
