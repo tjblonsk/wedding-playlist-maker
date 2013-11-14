@@ -17,7 +17,7 @@
 		<h4 class="col-header">Most Hated</h4>
 		<% @no_votes.each do |no| %>
 			<%= image_tag(no.thumb60, :class => "float-left", :alt => "album cover") %>
-			<%= no.name %><br />by: <%= no.artist %>
+			<%= no.name %><br />by: <%= no.artist %><br />
 			<%= no.votings %> vote<%= no.votings > 1 ? "s" : "" %>
 			<div class="clear spacer10"></div>
 		<% end %>
