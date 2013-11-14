@@ -1,6 +1,9 @@
 <h2>Your Playlists</h2>
 <p>Create as many playlists as you want. You can modify them at any time.<br />
+
+<% if @playlists.any? %>
 When you&rsquo;re ready, <%= link_to "add songs", songs_path %>.</p>
+<% end %>
 
 <% @playlists.each do |playlist| %>
 	<section>
