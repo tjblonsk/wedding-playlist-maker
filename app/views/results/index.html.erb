@@ -4,21 +4,21 @@
 <%= link_to "Vote again", votes_path, :class => "btn btn-primary" %>
 
 <div class="row">
-	<div class="col-md-4 sm-txt">
-		<h4 class="col-header">Most Loved</h4>
+	<div class="col-md-4 sm-txt yes">
+		<h3>Most Loved <%= image_tag("icon-yes.svg", size: "50x50", alt: "checkmark") %></h3>
 		<% @yes_votes.each do |yes| %>
 			<%= image_tag(yes.thumb60, :class => "float-left", :alt => "album cover") %>
 			<%= yes.name %><br />by: <%= yes.artist %><br />
-			<%= yes.votings %> vote<%= yes.votings > 1 ? "s" : "" %>
+			<p><%= yes.votings %> vote<%= yes.votings > 1 ? "s" : "" %></p>
 			<div class="clear spacer10"></div>
 		<% end %>
 	</div>
-	<div class="col-md-4 col-md-offset-1 sm-txt">
-		<h4 class="col-header">Most Hated</h4>
+	<div class="col-md-4 col-md-offset-1 sm-txt no">
+		<h3>Most Hated <%= image_tag("icon-no.svg", size: "40x40", alt: "X") %></h3>
 		<% @no_votes.each do |no| %>
 			<%= image_tag(no.thumb60, :class => "float-left", :alt => "album cover") %>
 			<%= no.name %><br />by: <%= no.artist %><br />
-			<%= no.votings %> vote<%= no.votings > 1 ? "s" : "" %>
+			<p><%= no.votings %> vote<%= no.votings > 1 ? "s" : "" %></p>
 			<div class="clear spacer10"></div>
 		<% end %>
 	</div>
