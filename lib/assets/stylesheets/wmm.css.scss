@@ -85,6 +85,10 @@
     color: #fff;
  }
 
+table.alt tr:nth-child(even) {
+    border-bottom: 2px solid #e0faff;
+ }
+
  label {
  	margin-top: 10px;
  	margin-bottom: 0;

@@ -3,28 +3,30 @@
 <p><%= link_to "+ Add Songs", songs_path, :class => "btn btn-primary" %></p>
 
 <% if @playlist_songs.count > 0 %>
-<table class="table">
+<table class="table alt">
 	<tr>
 		<th></th>
-		<th>Song</th>
+		<th width="25%">Song</th>
 		<th>Artist</th>
 		<th>Album</th>
-		<th>Preview</th>
 		<th></th>
 	</tr>
 	<% @playlist_songs.each do |song| %>
 	<tr>
-		<td><%= image_tag(song.thumb60) %></td>
+		<td rowspan="2"><%= image_tag(song.thumb100) %></td>
 		<td><%= song.name %></td>
 		<td><%= song.artist %></td>
 		<td><%= song.album %></td>
-		<td><%= audio_tag(song.audio, :controls => true, :preload => "none") %></td>
 		<td><%= link_to 'Delete', {:controller => "playlist_songs", 
                        :action => "destroy",  
                        :id => song.id,}, 
                        :confirm => "Are you sure?",
                        :class => "btn btn-danger",  
                        :method => "delete" %></td>
+	</tr>
+	<tr>
+	
+		<td colspan="4"><%= audio_tag(song.audio, :controls => true, :preload => "none") %></td>
 	</tr>
 	<% end %>
 </table>

@@ -1,5 +1,7 @@
 <h2>Your Playlists</h2>
-<p>Create as many playlists as you want. You can modify them at any time.</p>
+<p>Create as many playlists as you want. You can modify them at any time.<br />
+When you&rsquo;re ready, <%= link_to "add songs", songs_path %>.</p>
+
 <% @playlists.each do |playlist| %>
 	<p><%= link_to playlist.name, playlist, :class => "title" %> (<%= playlist.songs.count %> songs)</p>
 	<p>
