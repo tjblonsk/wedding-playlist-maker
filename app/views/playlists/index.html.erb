@@ -3,13 +3,15 @@
 When you&rsquo;re ready, <%= link_to "add songs", songs_path %>.</p>
 
 <% @playlists.each do |playlist| %>
-	<p><%= link_to playlist.name, playlist, :class => "title" %> (<%= playlist.songs.count %> songs)</p>
-	<p>
-		<% playlist.songs.each do |song| %>
-			<%= image_tag(song.thumb60) %>
-		<% end %>
-		<p><%= link_to "View", playlist %> | <%= link_to "Rename", edit_playlist_path(playlist) %> | 
-		<%= link_to 'Delete', playlist, :confirm => "Are you sure?", :method => "delete" %></p>
-	</p>
+	<section>
+		<p><%= link_to playlist.name, playlist, :class => "title" %> (<%= playlist.songs.count %> songs)</p>
+		<p>
+			<% playlist.songs.each do |song| %>
+				<%= image_tag(song.thumb60) %>
+			<% end %>
+			<p><%= link_to "View", playlist %> | <%= link_to "Rename", edit_playlist_path(playlist) %> | 
+			<%= link_to 'Delete', playlist, :confirm => "Are you sure?", :method => "delete" %></p>
+		</p>
+	</section>
 <% end %>
 <p><%= link_to "+ New Playlist", new_playlist_path, :class => "btn btn-primary"  %></p>
