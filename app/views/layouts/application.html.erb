@@ -5,7 +5,20 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+
+  <script type="text/javascript">
+	// Function to stop audio when current audio is playing
+	document.addEventListener('play', function(e){
+	    var audios = document.getElementsByTagName('audio');
+	    for(var i = 0, len = audios.length; i < len;i++){
+	        if(audios[i] != e.target){
+	            audios[i].pause();
+	        }
+	    }
+	}, true);
+  </script>
 </head>
+
 <body>
 <nav>
 	<div class="user_nav">
@@ -31,7 +44,6 @@
 		<%= image_tag("ribbons-right.svg", :class => "right", :alt => "-") %>
 	</div>
 </nav>
-
 <div class="container">
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1">
