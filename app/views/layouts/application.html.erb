@@ -36,10 +36,12 @@
 		<%= image_tag("ribbons-left.svg", :class => "left", :alt => "-") %>
 		<div class="menu">
 			<%= link_to "Home", root_path %>
-			<%= link_to "Playlist", playlists_path %>
+			<%= link_to "Playlists", playlists_path %>
+			<%= link_to "Songs", songs_path %>
 			<%= image_tag("logo.svg", :alt => "logo") %>
 			<%= link_to "Vote", votes_path %>
 			<%= link_to "Results", results_path %>
+			<%= link_to "Help", help_index_path %>
 		</div>
 		<%= image_tag("ribbons-right.svg", :class => "right", :alt => "-") %>
 	</div>

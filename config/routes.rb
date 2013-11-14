@@ -6,6 +6,7 @@ WeddingPlaylistMaker::Application.routes.draw do
   resources :playlist_songs, :only => [:create, :destroy]
   resources :votes, :only => [:index, :create, :update]
   resources :results, :only => [:index]
+  resources :help, :only => [:index]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
