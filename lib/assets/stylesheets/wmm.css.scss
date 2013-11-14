@@ -37,6 +37,8 @@
   font-size: 18px;
  }
 
+ .container {min-height:400px;}
+
  h1, h2, h3, h4 { font-family: 'PopulaireRegular'; color: #ed6456; margin: 10px 0 10px 0;}
 
  h1, .h1 { font-size: 60px;}
@@ -80,6 +82,10 @@
  }
 
  section {margin:30px 0 30px 0;}
+
+ footer {
+  width: 100%; margin-top: 1.5em; font-family: 'PopulaireRegular'; color: #16a6b6; font-size: 18px; text-align: center;
+ }
 
  .table th {
     background-color: #51656c; 
