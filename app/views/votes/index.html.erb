@@ -1,8 +1,7 @@
 <h2>Vote on these songs</h2>
+
 <p>Time to vote! Choose "YES" or "NO" for each song.</p> 
 <%= link_to "View Results »", results_path, :class => "btn btn-primary" %>
-
-
 	<% @paged_songs.each do |song| %>
 		<!-- displays yes, no or undecided -->
 		<% vote = Vote.find_current_vote(song.song_id, current_user.id) %>
@@ -13,18 +12,18 @@
 		<% end %>
 			<div class="col-md-2">
 				<div class="icon-container">
-					<%= link_to image_tag("icon-yes.svg", :class => "icon-yes", :alt => "YES"), {:controller => "votes", :action => "create", :vote => { :song_id => song.song_id, :vote => 1 }}, :method => "post" %>
+					<%= link_to image_tag("icon-yes.svg", :class => "icon-yes", :alt => "YES"), {:controller => "votes", :action => "create", :vote => { :song_id => song.song_id, :vote => 1, :curr_page => params[:page]}}, :method => "post" %>
 				</div>
-				<%= link_to "Yes", {:controller => "votes", :action => "create", :vote => { :song_id => song.song_id, :vote => 1 }}, :class => "txt-vote", :method => "post" %>
+				<%= link_to "Yes", {:controller => "votes", :action => "create", :vote => { :song_id => song.song_id, :vote => 1, :curr_page => params[:page] }}, :class => "txt-vote", :method => "post" %>
 			</div>
 			<div class="col-md-2">
 				<div class="icon-container">
-					<%= link_to image_tag("icon-no.svg", :class => "icon-no", :alt => "NO"), {:controller => "votes", :action => "create", :vote => { :song_id => song.song_id, :vote => 2 }}, :class => "" ,:method => "post" %>
+					<%= link_to image_tag("icon-no.svg", :class => "icon-no", :alt => "NO"), {:controller => "votes", :action => "create", :vote => { :song_id => song.song_id, :vote => 2, :curr_page => params[:page] }}, :class => "" ,:method => "post" %>
 				</div>
-				<%= link_to "No", {:controller => "votes", :action => "create", :vote => { :song_id => song.song_id, :vote => 2 }}, :class => "txt-vote" ,:method => "post" %>
+				<%= link_to "No", {:controller => "votes", :action => "create", :vote => { :song_id => song.song_id, :vote => 2, :curr_page => params[:page] }}, :class => "txt-vote" ,:method => "post" %>
 			</div>
 			<div class="col-md-6">
-			<a id="<%= song.id %>"></a>
+			<a id="<%= song.song_id %>"></a>
 			<%= image_tag(song.thumb60, :class => "float-left", :alt => "album cover") %>
 			<p><%= song.name %><br />
 			by: <%= song.artist %></p>
@@ -35,6 +34,8 @@
 	<% end %>
 
 
+
 <div class="paginate-container">
+	<p><%= page_entries_info @paged_songs %></p>
 	<%= paginate @paged_songs %>
 </div>

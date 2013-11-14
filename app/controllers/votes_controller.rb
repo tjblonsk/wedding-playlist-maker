@@ -11,8 +11,9 @@ class VotesController < ApplicationController
     @vote = Vote.find_create(vote_params[:song_id], current_user.id)
     @vote.cast_vote = vote_params[:vote]
     anchor_id = vote_params[:song_id]
+    curr_page = vote_params[:curr_page].to_i
   	if @vote.save
-  		redirect_to votes_path(anchor: anchor_id)
+  		redirect_to votes_path(anchor: anchor_id, page: curr_page)
   	else
   		redirect_to :back, :notice => "Sorry, try again."
   	end
@@ -20,6 +21,6 @@ class VotesController < ApplicationController
 
   private
   def vote_params
-    params.require(:vote).permit(:song_id, :vote)
+    params.require(:vote).permit(:song_id, :vote, :curr_page)
   end
 end
