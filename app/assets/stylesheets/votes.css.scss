@@ -1,10 +1,16 @@
 .row .row {margin-bottom: 20px;}
 
-.row .yes img.icon-yes {visibility:visible;}
-.row .yes img.icon-no {visibility:hidden;}
+.row .col-md-2 {text-align:center;}
 
-.row .no img.icon-yes {visibility:hidden;}
-.row .no img.icon-no {visibility:visible;}
+.row a.txt-vote {color:#51656c; font-family: 'PopulaireRegular'; font-size: 30px;}
 
-.row .undecided img.icon-yes {visibility:hidden;}
-.row .undecided img.icon-no {visibility:hidden;}
+.row .yes img.icon-yes {opacity:100;}
+.row .yes img.icon-no {opacity:0;}
+
+.row .no img.icon-yes {opacity:0;}
+.row .no img.icon-no {opacity:100;}
+
+.row .undecided img.icon-yes {opacity:0;}
+.row .undecided img.icon-no {opacity:0;}
+
+.icon-container {width:100px; height:100px; background: url('icon-container.svg') no-repeat center center;}

@@ -12,16 +12,16 @@
 			<div class="row undecided">
 		<% end %>
 			<div class="col-md-2">
-				<div style="width:100px;height:100px;border:1px solid #000;">
-					<%= image_tag("icon-yes.svg", :class => "icon-yes", :alt => "YES") %>
+				<div class="icon-container">
+					<%= link_to image_tag("icon-yes.svg", :class => "icon-yes", :alt => "YES"), {:controller => "votes", :action => "create", :vote => { :song_id => song.song_id, :vote => 1 }}, :method => "post" %>
 				</div>
-				<%= link_to "Yes", {:controller => "votes", :action => "create", :vote => { :song_id => song.song_id, :vote => 1 }}, :class => "", :method => "post" %>
+				<%= link_to "Yes", {:controller => "votes", :action => "create", :vote => { :song_id => song.song_id, :vote => 1 }}, :class => "txt-vote", :method => "post" %>
 			</div>
 			<div class="col-md-2">
-				<div style="width:100px;height:100px;border:1px solid #000;">
-					<%= image_tag("icon-no.svg", :class => "icon-no", :alt => "NO") %>
+				<div class="icon-container">
+					<%= link_to image_tag("icon-no.svg", :class => "icon-no", :alt => "NO"), {:controller => "votes", :action => "create", :vote => { :song_id => song.song_id, :vote => 2 }}, :class => "" ,:method => "post" %>
 				</div>
-				<%= link_to "No", {:controller => "votes", :action => "create", :vote => { :song_id => song.song_id, :vote => 2 }}, :class => "" ,:method => "post" %>
+				<%= link_to "No", {:controller => "votes", :action => "create", :vote => { :song_id => song.song_id, :vote => 2 }}, :class => "txt-vote" ,:method => "post" %>
 			</div>
 			<div class="col-md-6">
 			<%= image_tag(song.thumb60, :class => "float-left", :alt => "album cover", :id => song.id) %>
