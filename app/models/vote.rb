@@ -23,9 +23,9 @@ class Vote < ActiveRecord::Base
     #change this
   	def self.display(num)
   		case num
-  		when 1
+  		when 1 #yes vote
   			return "yes"
-  		when 2
+  		when 2 #no vote
   			return "no"
   		else
   			return "undecided"

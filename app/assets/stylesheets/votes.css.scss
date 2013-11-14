@@ -1,15 +1,10 @@
-.undecided, .yes, .no {
-}
+.row .row {margin-bottom: 20px;}
 
-.yes {
-	background-color: #46A705;
-}
+.row .yes img.icon-yes {visibility:visible;}
+.row .yes img.icon-no {visibility:hidden;}
 
-.no {
-	background-color: #ba4949;
-	text-align: right;
-}
+.row .no img.icon-yes {visibility:hidden;}
+.row .no img.icon-no {visibility:visible;}
 
-.undecided {
-	text-align: center;
-}
+.row .undecided img.icon-yes {visibility:hidden;}
+.row .undecided img.icon-no {visibility:hidden;}
