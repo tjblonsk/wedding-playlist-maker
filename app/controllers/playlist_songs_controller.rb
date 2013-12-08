@@ -2,10 +2,10 @@ class PlaylistSongsController < ApplicationController
 	def create
 		@playlist_song = PlaylistSong.new(playlistsong_params)
 		if @playlist_song.save
-      		redirect_to playlist_path(@playlist_song.playlist_id)
-    	else
-      		redirect_to :back, notice: "Sorry, please try again."
-      	end
+      			redirect_to playlist_path(@playlist_song.playlist_id)
+    		else
+      			redirect_to :back, notice: "Sorry, please try again."
+      		end
 	end
 
 	def destroy
@@ -16,6 +16,6 @@ class PlaylistSongsController < ApplicationController
 
 	private
   	def playlistsong_params
-    	params.require(:playlist_song).permit(:playlist_id, :song_id)
+    		params.require(:playlist_song).permit(:playlist_id, :song_id)
   	end
 end
